@@ -1,6 +1,6 @@
 <?php
 
-class AreaMaps {
+class AreaGM {
 
 	/**
 	 * Plugin Instance
@@ -28,14 +28,14 @@ class AreaMaps {
 
 	function load_dependencies() {
 
-		require_once AREAMAPS_PLUGIN_DIR . '/includes/functions.php';
-		require_once AREAMAPS_PLUGIN_DIR . '/includes/class-areamaps-i18n.php';
-		require_once AREAMAPS_PLUGIN_DIR . '/includes/class-areamaps-cpt.php';
-		require_once AREAMAPS_PLUGIN_DIR . '/public/class-areamaps-public.php';
+		require_once AREAGM_PLUGIN_DIR . '/includes/functions.php';
+		require_once AREAGM_PLUGIN_DIR . '/includes/class-areamaps-i18n.php';
+		require_once AREAGM_PLUGIN_DIR . '/includes/class-areamaps-cpt.php';
+		require_once AREAGM_PLUGIN_DIR . '/public/class-areamaps-public.php';
 
 		if( is_admin() ) {
-			require_once AREAMAPS_PLUGIN_DIR . '/admin/class-areamaps-settings.php';
-			require_once AREAMAPS_PLUGIN_DIR . '/admin/class-areamaps-admin.php';
+			require_once AREAGM_PLUGIN_DIR . '/admin/class-areamaps-settings.php';
+			require_once AREAGM_PLUGIN_DIR . '/admin/class-areamaps-admin.php';
 		}
 	}
 
@@ -49,7 +49,7 @@ class AreaMaps {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new AreaMaps_i18n();
+		$plugin_i18n = new AreaGM_i18n();
 		$plugin_i18n->set_domain( 'letsgo' );
 
 		add_action( 'plugins_loaded', [ $plugin_i18n, 'load_plugin_textdomain' ] );
@@ -60,11 +60,11 @@ class AreaMaps {
 	 */
 	private function set_objects() {
 		if( is_admin() ) {
-			$this->admin    = new AreaMaps_Admin();
-			$this->settings = new AreaMaps_Settings();
+			$this->admin    = new AreaGM_Admin();
+			$this->settings = new AreaGM_Settings();
 		}
 		
-		$this->public = new AreaMaps_Public();
+		$this->public = new AreaGM_Public();
 	}
 }
 

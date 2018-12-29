@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Deactivator {
+class AreaGM_Deactivator {
 
 	static public function deactivate() {
 		

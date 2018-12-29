@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_i18n {
+class AreaGM_i18n {
 
 	/**
 	 * The domain specified for this plugin.
@@ -14,7 +14,7 @@ class AreaMaps_i18n {
 		load_plugin_textdomain(
 			$this->domain,
 			false,
-			AREAMAPS_PLUGIN_DIR . '/languages/'
+			AREAGM_PLUGIN_DIR . '/languages/'
 		);
 
 	}

@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Settings {
+class AreaGM_Settings {
 
 	public $url_apikey = 'https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true&hl=es';
 
@@ -11,7 +11,7 @@ class AreaMaps_Settings {
 	}
 
 	public function verify_apikey() {
-		$settings = areamaps_settings();
+		$settings = areagm_settings();
 
 		if(!isset($settings['areamaps_apikey']) || $settings['areamaps_apikey'] == '')
 			add_action( 'admin_notices', [ $this, 'warning_notice' ] );
@@ -27,7 +27,7 @@ class AreaMaps_Settings {
 	}
 
 	public function add_submenu() {
-		include_once AREAMAPS_PLUGIN_DIR.'/admin/layouts/template_options.php';
+		include_once AREAGM_PLUGIN_DIR.'/admin/layouts/template_options.php';
 	}
 
 

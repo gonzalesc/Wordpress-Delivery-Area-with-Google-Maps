@@ -18,9 +18,9 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-define('AREAMAPS_PLUGIN_DIR' , plugin_dir_path(__FILE__));
-define('AREAMAPS_PLUGIN_URL' , plugin_dir_url(__FILE__));
-define('AREAMAPS_PLUGIN_BASE' , plugin_basename( __FILE__ ));
+define('AREAGM_PLUGIN_DIR' , plugin_dir_path(__FILE__));
+define('AREAGM_PLUGIN_URL' , plugin_dir_url(__FILE__));
+define('AREAGM_PLUGIN_BASE' , plugin_basename( __FILE__ ));
 
 
 
@@ -35,28 +35,28 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-areamaps.php';
  * The code that runs during plugin activation.
  * This action is documented in includes/class-areamaps-activator.php
  */
-function areamaps_activate() {
+function areagm_activate() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-areamaps-activator.php';
-    AreaMaps_Activator::activate();
+    AreaGM_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-areamaps-deactivator.php
  */
-function areamaps_deactivate() {
+function areagm_deactivate() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-areamaps-deactivator.php';
-    AreaMaps_Deactivator::deactivate();
+    AreaGM_Deactivator::deactivate();
 }
 
 
-register_activation_hook( __FILE__, 'areamaps_activate' );
-register_deactivation_hook( __FILE__, 'areamaps_deactivate' );
+register_activation_hook( __FILE__, 'areagm_activate' );
+register_deactivation_hook( __FILE__, 'areagm_deactivate' );
 
 /**
  * Store the plugin global
  */
-global $areamaps;
+global $areagm;
 
 /**
  * Begins execution of the plugin.
@@ -66,10 +66,10 @@ global $areamaps;
  * not affect the page life cycle.
  */
 
-function AreaMaps() {
-    return AreaMaps::instance();
+function AreaGM() {
+    return AreaGM::instance();
 }
 
-$GLOBALS['areamaps'] = AreaMaps();
+$GLOBALS['areagm'] = AreaGM();
 
 ?>

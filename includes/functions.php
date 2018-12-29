@@ -1,7 +1,7 @@
 <?php
 
-if( !function_exists('areamaps_settings') ) {
-	function areamaps_settings() {
+if( !function_exists('areagm_settings') ) {
+	function areagm_settings() {
 
 		$default = [
 					'areamaps_apikey' => '',

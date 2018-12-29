@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Public {
+class AreaGM_Public {
 
 	function __construct() {
 		//add_action('wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] ,20 );
@@ -23,7 +23,7 @@ class AreaMaps_Public {
 
 			$stylemaps = 'width:'.$param['w'].';height:'.$param['h'].';';
 
-			$settings = areamaps_settings();
+			$settings = areagm_settings();
 		
 			if( $settings['areamaps_front_js'] == true &&
 				isset($settings['areamaps_handle']) && !empty($settings['areamaps_handle'])

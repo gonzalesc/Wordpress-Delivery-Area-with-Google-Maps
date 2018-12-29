@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Cpt {
+class AreaGM_Cpt {
 
 	public function __construct() {
 		add_action('init', [ $this, 'register_cpt' ]);
@@ -61,5 +61,5 @@ class AreaMaps_Cpt {
 	}
 }
 
-new AreaMaps_Cpt();
+new AreaGM_Cpt();
 ?>

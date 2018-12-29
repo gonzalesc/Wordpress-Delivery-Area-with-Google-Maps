@@ -29,3 +29,8 @@ Like a Wordpress Plugin
 ### Copy Shortcode and put it in a single page
 
 ![Alt text](https://www.letsgodev.com/wp-content/uploads/2016/09/shortcode3.jpg "Copy Shortcode and put it in a single page")
+
+## How use the shortcode
+```
+[areamaps]
+```

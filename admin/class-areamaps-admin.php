@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Admin {
+class AreaGM_Admin {
 
 	protected $options_default = array(
 									'jsmap'			=> 1,
@@ -23,7 +23,7 @@ class AreaMaps_Admin {
 										);
 
 		add_filter( 'plugin_row_meta', [ $this, 'setting_external_link' ], 10, 2 );
-		add_filter( 'plugin_action_links_'.AREAMAPS_PLUGIN_BASE, [ $this, 'setting_internal_link' ] );
+		add_filter( 'plugin_action_links_'.AREAGM_PLUGIN_BASE, [ $this, 'setting_internal_link' ] );
 
 		/*	Embed JS	*/
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
@@ -54,7 +54,7 @@ class AreaMaps_Admin {
 		if( get_post_type() !== 'areamaps' || !in_array( $pagenow, [ 'post-new.php', 'edit.php', 'post.php' ] ) )
 			return;
 
-		$settings = areamaps_settings();
+		$settings = areagm_settings();
 
 		if( isset( $settings['areamaps_apikey'] ) && $settings['areamaps_apikey'] != '' &&
 			isset( $settings['areamaps_admin_js'] ) && $settings['areamaps_admin_js'] == true &&
@@ -75,7 +75,7 @@ class AreaMaps_Admin {
 
 
 	function setting_external_link($links, $file) {
-		if ( $file == AREAMAPS_PLUGIN_BASE ) {
+		if ( $file == AREAGM_PLUGIN_BASE ) {
 			
 			$row_meta = array(
 						'docs' => sprintf('<a href="%s" target="_blank" title="%s">%s</a>',esc_url('https://github.com/gonzalesc/Wordpress-Delivery-Area-with-Google-Maps'), 'Delivery Area with Google Maps' ,'Documentation'),
@@ -98,12 +98,12 @@ class AreaMaps_Admin {
 	public function input_map() {
 		global $post;
 
-		$settings = areamaps_settings();
+		$settings = areagm_settings();
 		
 		if(isset($settings['areamaps_apikey']) && $settings['areamaps_apikey'] != '') {
 			wp_enqueue_script('areamaps-child', admin_url('admin-ajax.php?action=areamaps_js&id='.$post->ID), array( $settings['areamaps_handle'], 'jquery'), false, true );
 
-			include_once AREAMAPS_PLUGIN_DIR . '/admin/layouts/view-admin-maps.php';
+			include_once AREAGM_PLUGIN_DIR . '/admin/layouts/view-admin-maps.php';
 		}
 		else
 			echo sprintf(__('Please enter your google api key in <a href="%s" title="setting page">Setting page</a>','letsgo'), admin_url('edit.php?post_type=areamaps&page=area_settings') );
@@ -121,7 +121,7 @@ class AreaMaps_Admin {
 
 	public function map_js(){
 
-    	$settings = areamaps_settings();
+    	$settings = areagm_settings();
 
     	if( isset($settings['areamaps_lat']) && !empty($settings['areamaps_lat']) )
     		$this->options_default['lat'] = $settings['areamaps_lat'];
@@ -129,7 +129,7 @@ class AreaMaps_Admin {
     	if( isset($settings['areamaps_lng']) && !empty($settings['areamaps_lng']) )
     		$this->options_default['lng'] = $settings['areamaps_lng'];
 
-		include_once AREAMAPS_PLUGIN_DIR. '/admin/assets/js/areamap_js.php';
+		include_once AREAGM_PLUGIN_DIR. '/admin/assets/js/areamap_js.php';
 		die();
 	}
 

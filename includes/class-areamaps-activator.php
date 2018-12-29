@@ -1,5 +1,5 @@
 <?php
-class AreaMaps_Activator {
+class AreaGM_Activator {
 
 	static public function activate() {
 		$administrator = get_role( 'administrator' );
