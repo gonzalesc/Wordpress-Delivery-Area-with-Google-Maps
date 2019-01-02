@@ -1,5 +1,5 @@
-<?php header("Content-type: text/javascript");  ?>
-<?php
+<?php 
+header("Content-type: text/javascript");
 
 if( !is_numeric($_GET['id']) )
 	exit;

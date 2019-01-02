@@ -1,0 +1,154 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Delivery Area\n"
+"POT-Creation-Date: 2018-12-31 01:17-0300\n"
+"PO-Revision-Date: 2018-12-31 01:18-0300\n"
+"Last-Translator: \n"
+"Language-Team: Letsgodev\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-areamaps-admin.php:82
+msgid "Support"
+msgstr "Soporte"
+
+#: admin/class-areamaps-admin.php:109 admin/class-areamaps-settings.php:21
+#, php-format
+msgid ""
+"Please enter your ApiKey Google Maps in the <a href=\"%s\" title=\"setting "
+"section\">setting section</a>"
+msgstr ""
+"Por favor ingresa tu ApiKey de Google Maps en la <a href=\"%s\" title="
+"\"sección de ajustes\">sección de ajustes</a>"
+
+#: admin/class-areamaps-admin.php:118
+msgid "Please insert this shortcode in you page"
+msgstr "Por favor inserta este shortcode en tu página"
+
+#: admin/class-areamaps-admin.php:187
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/class-areamaps-settings.php:26
+msgid "Settings"
+msgstr "Ajustes"
+
+#: admin/class-areamaps-settings.php:46
+msgid "Settings Areamaps"
+msgstr "Ajustes de Areamaps"
+
+#: admin/class-areamaps-settings.php:53
+msgid "API GoogleMaps"
+msgstr "ApiKey Google Maps"
+
+#: admin/class-areamaps-settings.php:61
+msgid "Include Google Maps Library in the Front"
+msgstr "Incluir Librería de Google Maps en el front"
+
+#: admin/class-areamaps-settings.php:69
+msgid "Include Google Maps Library in the Admin Panel"
+msgstr "Incluir librería de Google Maps en el panel administrativo"
+
+#: admin/class-areamaps-settings.php:77
+msgid "Handle Js"
+msgstr "Handle Js"
+
+#: admin/class-areamaps-settings.php:85
+msgid "Latitude Default"
+msgstr "Latitud por defecto"
+
+#: admin/class-areamaps-settings.php:93
+msgid "Longitude Default"
+msgstr "Longitud por defecto"
+
+#: admin/class-areamaps-settings.php:112
+#, php-format
+msgid ""
+"Enter your ApiKey Google Maps. You can generate a key <a href=\"%s\" target="
+"\"_blank\">here</a>"
+msgstr ""
+"Por favor ingresa tu ApiKey de Google Maps en la <a href=\"%s\" title="
+"\"sección de ajustes\">sección de ajustes</a>"
+
+#: admin/class-areamaps-settings.php:123
+msgid ""
+"If you uncheck this option, you should add manually the Google Maps Library "
+"in the Front"
+msgstr ""
+"Si tu desmarcas esta opción, debes agregar manualmente la librería de Google "
+"Maps en el front"
+
+#: admin/class-areamaps-settings.php:133
+msgid ""
+"If you uncheck this option, you should add manually the Google Maps Library "
+"in the Admin Panel"
+msgstr ""
+"Si tu desmarcas esta opción, debes agregar manualmente la librería de Google "
+"Maps in el panel administrativo"
+
+#: admin/class-areamaps-settings.php:161
+msgid "Options"
+msgstr "Opciones"
+
+#: admin/layouts/template_options.php:2
+msgid "Area Delivery Settings"
+msgstr "Ajustes de Areas de entrega"
+
+#: admin/layouts/view-admin-maps.php:4
+msgid "Address"
+msgstr "Dirección"
+
+#: admin/layouts/view-admin-maps.php:6
+msgid "Search"
+msgstr "Buscar"
+
+#: admin/layouts/view-admin-maps.php:8
+msgid "Line Color"
+msgstr "Color de línea"
+
+#: includes/class-areamaps-cpt.php:10 includes/class-areamaps-cpt.php:11
+msgid "Delivery Area"
+msgstr "Delivery Area"
+
+#: includes/class-areamaps-cpt.php:12 includes/class-areamaps-cpt.php:13
+#: includes/class-areamaps-cpt.php:14
+msgid "Areas List"
+msgstr "Lista de areas"
+
+#: includes/class-areamaps-cpt.php:15 includes/class-areamaps-cpt.php:16
+msgid "Add New Area"
+msgstr "Agregar Area"
+
+#: includes/class-areamaps-cpt.php:17
+msgid "Edit Area"
+msgstr "Editar Area"
+
+#: includes/class-areamaps-cpt.php:18
+msgid "New Area"
+msgstr "Nueva Area"
+
+#: includes/class-areamaps-cpt.php:19
+msgid "View Area"
+msgstr "Ver Area"
+
+#: includes/class-areamaps-cpt.php:20
+msgid "Search Area"
+msgstr "Buscar Area"
+
+#: includes/class-areamaps-cpt.php:21
+msgid "Nothing found"
+msgstr "Nada encontrado"
+
+#: includes/class-areamaps-cpt.php:22
+msgid "Nothing found in Trash"
+msgstr "Nada encontrado en la basura"
+
+#~ msgid "List Areas"
+#~ msgstr "Lista de Areas"

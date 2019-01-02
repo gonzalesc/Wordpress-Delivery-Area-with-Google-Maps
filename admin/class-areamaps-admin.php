@@ -106,7 +106,7 @@ class AreaGM_Admin {
 			include_once AREAGM_PLUGIN_DIR . '/admin/layouts/view-admin-maps.php';
 		}
 		else
-			echo sprintf(__('Please enter your google api key in <a href="%s" title="setting page">Setting page</a>','letsgo'), admin_url('edit.php?post_type=areamaps&page=area_settings') );
+			echo sprintf(__('Please enter your ApiKey Google Maps in the <a href="%s" title="setting section">setting section</a>','letsgo'), admin_url('edit.php?post_type=areamaps&page=area_settings') );
 	}
 
 	public function input_shortcode() {
