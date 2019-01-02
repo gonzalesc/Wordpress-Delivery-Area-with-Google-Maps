@@ -1,7 +1,7 @@
 
 # Delivery Area with Google Maps - Wordpress Plugin
 
-Welcome to the Delivery Area with Google Maps repository on Github. This plugin allows you create delivery areas in Google Maps and by a shortcode put it in everywhere. We recommend read the [Documentation Online](https://www.letsgodev.com/documentation/docs-delivery-area-with-google-maps/) to stay up to date about everything happening in the project. You can also [follow @agonzalesc](https://twitter.com/agonzalesc) on Twitter for the latest development updates.
+Welcome to the Delivery Area with Google Maps repository on Github. This plugin allows you create delivery areas in Google Maps and by a shortcode put it in everywhere.
 
 ## Requirements
 
