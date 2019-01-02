@@ -18,7 +18,7 @@ class AreaGM_Settings {
 	}
 
 	public function warning_notice() {
-		echo '<div class="update-nag"><p>'.sprintf(__('Please enter your ApiKey Google Maps in the <a href="%s" title="setting section">setting section</a>','letsgo'), admin_url('edit.php?post_type=areamaps&page=area_settings') ).'</p></div>'; 
+		echo '<div class="update-nag"><p>'.sprintf(__('Please enter your google api key in <a href="%s" title="setting page">Setting page</a>','letsgo'), admin_url('edit.php?post_type=areamaps&page=area_settings') ).'</p></div>'; 
 	}
 
 
@@ -58,7 +58,7 @@ class AreaGM_Settings {
 
 		add_settings_field(
 			'areamaps_front_js', // ID
-			__('Include Google Maps Library in the Front','letsgo'), // Include Library
+			__('Include library Google Maps in the Front','letsgo'), // Include Library
 			[ $this, 'input_front_jsmap' ], // Callback
 			'settingareamaps', // Page
 			'gowoo-seccion' // Section
@@ -66,7 +66,7 @@ class AreaGM_Settings {
 
 		add_settings_field(
 			'areamaps_admin_js', // ID
-			__('Include Google Maps Library in the Admin Panel','letsgo'), // Include Library
+			__('Include library Google Maps in the Admin Panel','letsgo'), // Include Library
 			[ $this, 'input_admin_jsmap' ], // Callback
 			'settingareamaps', // Page
 			'gowoo-seccion' // Section
@@ -109,7 +109,7 @@ class AreaGM_Settings {
 
 		echo '<label for="areamaps_apikey">
 			<input type="text" id="areamaps_apikey" name="areamaps_options[areamaps_apikey]" value="'.$input_key.'" /></label>
-			<p>'.sprintf(__('Enter your ApiKey Google Maps. You can generate a key <a href="%s" target="_blank">here</a>','letsgo'),$this->url_apikey).'.</p><br />';
+			<p>'.sprintf(__('Enter your google account api key. You can generate a key <a href="%s" target="_blank">here</a>','letsgo'),$this->url_apikey).'.</p><br />';
 	}
 
 
@@ -120,7 +120,7 @@ class AreaGM_Settings {
 
 		echo '<label for="areamaps_front_js">
 			<input type="checkbox" id="areamaps_front_js" name="areamaps_options[areamaps_front_js]" value="1" '.$checked.' /></label>
-			<p>'.__('If you uncheck this option, you should add manually the Google Maps Library in the Front','letsgo').'</p>';
+			<p>'.__('If you uncheck this option, you should add manually the library Google Maps in the Front','letsgo').'</p>';
 	}
 
 	public function input_admin_jsmap() {
@@ -130,7 +130,7 @@ class AreaGM_Settings {
 
 		echo '<label for="areamaps_admin_js">
 			<input type="checkbox" id="areamaps_admin_js" name="areamaps_options[areamaps_admin_js]" value="1" '.$checked.' /></label>
-			<p>'.__('If you uncheck this option, you should add manually the Google Maps Library in the Admin Panel','letsgo').'</p>';
+			<p>'.__('If you uncheck this option, you should add manually the library Google Maps in the Admin Panel','letsgo').'</p>';
 	}
 
 	public function input_handle() {
