@@ -60,7 +60,7 @@ class AreaGM_Admin {
 			isset( $settings['areamaps_admin_js'] ) && $settings['areamaps_admin_js'] == true &&
 			isset( $settings['areamaps_handle'] ) && !empty( $settings['areamaps_handle'] )
 		) {
-			wp_enqueue_script($settings['areamaps_handle'],'//maps.googleapis.com/maps/api/js?key='.$settings['areamaps_apikey'].'&libraries=geometry',array('jquery'), false, true );
+			wp_enqueue_script($settings['areamaps_handle'],'//maps.googleapis.com/maps/api/js?key='.$settings['areamaps_apikey'].'&libraries=geometry,places',array('jquery'), false, true );
 		}
 	}
 

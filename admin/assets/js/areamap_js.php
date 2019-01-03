@@ -39,8 +39,15 @@ var geocoder;
 var map;
 var coords;
 var polygon;
+var autocomplete;
 
 function initialize() {
+
+	autocomplete = new google.maps.places.Autocomplete(
+						(document.getElementById('areamaps_address')),
+						{types: ['geocode']}
+					);
+
 	var mapOptions = {
 						center: new google.maps.LatLng(<?php echo $lat; ?>,<?php echo $lng; ?>),
 						zoom: <?php echo $zoom; ?>,

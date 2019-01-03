@@ -2,7 +2,7 @@
 
 <div style="margin-bottom:10px;">
 	<label><?php _e('Address','letsgo'); ?>:</label>
-	<input id="areamaps_address" type="textbox" value="" />
+	<input id="areamaps_address" type="textbox" value="" size="35" />
 	<input type="button" value="<?php _e('Search','letsgo'); ?>" onclick="codeAddress()" />
 
 	<label style="margin-left:20px;"><?php _e('Line Color','letsgo'); ?>:</label>
