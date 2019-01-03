@@ -3,7 +3,7 @@
 Plugin Name: Delivery Area with Google Maps
 Plugin URI: http://wordpress.org/extend/plugins/wp-delivery-area-with-google-maps/
 Description: This plugin allows you create delivery areas in Google Maps and by a shortcode put it in everywhere
-Version: 1.2.1
+Version: 1.2.2
 Author: Lets Go Dev
 Author URI: https://www.letsgodev.com
 Developer: Alexander
