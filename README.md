@@ -43,3 +43,16 @@ The ```color input``` is to paint the area delivery.
 - ```d``` : is the id of post (required).
 - ```w``` is the widht ( you must specify the units: px, %, etc )
 - ```h``` is the height ( you must specify the units: px, %, etc )
+- ```lib``` : yes/no , if it is "yes" then the Google Maps library is embed
+- ```handle``` : is the name to be embed as JS library
+
+## FAQ
+
+**1. I have a warning "duplicate library"**
+Maybe your theme or other plugin is embedding the Google Maps library so we should find out the handle name how this library is loaded.
+
+After, you need add some parameters in your shortcode so the Google Maps library doesnt be embed.
+
+```
+[areamaps id=10712 w=100% h=400px lib="no" handle="name_library"]
+```
