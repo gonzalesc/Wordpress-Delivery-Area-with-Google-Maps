@@ -5,7 +5,6 @@ if( !function_exists('areagm_settings') ) {
 
 		$default = [
 					'areamaps_apikey' => '',
-					'areamaps_front_js' => true,
 					'areamaps_admin_js' => true,
 					'areamaps_handle' => 'areamaps-js',
 					'areamaps_lat'	=> '',

@@ -57,14 +57,6 @@ class AreaGM_Settings {
 		);
 
 		add_settings_field(
-			'areamaps_front_js', // ID
-			__('Include Google Maps Library in the Front','letsgo'), // Include Library
-			[ $this, 'input_front_jsmap' ], // Callback
-			'settingareamaps', // Page
-			'gowoo-seccion' // Section
-		);
-
-		add_settings_field(
 			'areamaps_admin_js', // ID
 			__('Include Google Maps Library in the Admin Panel','letsgo'), // Include Library
 			[ $this, 'input_admin_jsmap' ], // Callback
@@ -110,17 +102,6 @@ class AreaGM_Settings {
 		echo '<label for="areamaps_apikey">
 			<input type="text" id="areamaps_apikey" name="areamaps_options[areamaps_apikey]" value="'.$input_key.'" /></label>
 			<p>'.sprintf(__('Enter your ApiKey Google Maps. You can generate a key <a href="%s" target="_blank">here</a>','letsgo'),$this->url_apikey).'.</p><br />';
-	}
-
-
-	public function input_front_jsmap() {
-		$options_current = get_option('areamaps_options', array('areamaps_front_js' => true ));
-
-		$checked = isset($options_current['areamaps_front_js'])&&$options_current['areamaps_front_js'] ? 'CHECKED' : '';
-
-		echo '<label for="areamaps_front_js">
-			<input type="checkbox" id="areamaps_front_js" name="areamaps_options[areamaps_front_js]" value="1" '.$checked.' /></label>
-			<p>'.__('If you uncheck this option, you should add manually the Google Maps Library in the Front','letsgo').'</p>';
 	}
 
 	public function input_admin_jsmap() {

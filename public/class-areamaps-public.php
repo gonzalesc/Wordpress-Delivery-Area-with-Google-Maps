@@ -12,28 +12,32 @@ class AreaGM_Public {
 	function add_shortcode( $atts ) {
 
 		ob_start();
+		$settings = areagm_settings();
 
 		$param = shortcode_atts( array(
-			'id' => 0,
-			'w' => '100%',
-			'h' => '300px'
+			'id'		=> 0,
+			'w'			=> '100%',
+			'h'			=> '300px',
+			'lib'		=> 'yes',
+			'handle'	=> $settings['areamaps_handle']
 		), $atts );
 
-		if( isset($param['id']) && is_numeric($param['id']) ) {
+		if( isset($param['id']) && is_numeric($param['id']) && $param['id'] > 0 ) {
 
+			$id = intval($param['id']);
 			$stylemaps = 'width:'.$param['w'].';height:'.$param['h'].';';
 
-			$settings = areagm_settings();
 		
-			if( $settings['areamaps_front_js'] == true &&
-				isset($settings['areamaps_handle']) && !empty($settings['areamaps_handle'])
-			) {
-				wp_enqueue_script($settings['areamaps_handle'], '//maps.googleapis.com/maps/api/js?key='.$settings['areamaps_apikey'].'&libraries=geometry', array('jquery'), false, true);
+			if( !empty($param['handle']) ) {
+
+				if( $param['lib'] == 'yes' ) {
+					wp_enqueue_script($param['handle'], '//maps.googleapis.com/maps/api/js?key='.$settings['areamaps_apikey'].'&libraries=geometry', array('jquery'), false, true);
+				}
+
+				wp_enqueue_script('areamaps-child-'.$id, admin_url('admin-ajax.php?action=frontmap_js&id='.$id), array($param['handle'],'jquery'), false, true);
+
+				echo '<div id="areamaps-'.$id.'" style="'.$stylemaps.'"></div>';
 			}
-
-			wp_enqueue_script('areamaps-child-'.$param['id'], admin_url('admin-ajax.php?action=frontmap_js&id='.$param['id']), array($settings['areamaps_handle'],'jquery'), false, true);
-
-			echo '<div id="areamaps-'.$param['id'].'" style="'.$stylemaps.'"></div>';
 		}
 		
 		$output = ob_get_contents();
