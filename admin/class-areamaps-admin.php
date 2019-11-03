@@ -93,6 +93,8 @@ class AreaGM_Admin {
 	public function add_meta_boxes() {
 		add_meta_box('areamaps_mapmeta', 'Map', [ $this, 'input_map' ], 'areamaps', 'normal', 'high');
 		add_meta_box('areamaps_shortmeta', 'Shortcodes', [ $this, 'input_shortcode' ], "areamaps", "side", "low");
+
+		do_action('areamaps/admin/meta_boxes', $this);
 	}
 
 	public function input_map() {
@@ -170,6 +172,8 @@ class AreaGM_Admin {
 				'zoom'	 => !empty($_POST['areamaps_zoom']) ? sanitize_text_field($_POST['areamaps_zoom']) : $this->options_default['zoom']
 			);
 
+			$array_save_post = apply_filters('areamaps/admin/save', $array_save_post, $_POST);
+
 			update_post_meta($post_id, 'areamaps_metakey', $array_save_post);
 		}
 		
@@ -187,7 +191,7 @@ class AreaGM_Admin {
 				$ok_columns['shortcode'] = __( 'Shortcode', 'gowoo' );
 		}
 		
-		return $ok_columns;
+		return apply_filters('areamaps/admin/column_name', $ok_columns );
 	}
 
 	function add_value_column($column, $post_id) {
@@ -196,6 +200,8 @@ class AreaGM_Admin {
 			$meta_shortcode = '[areamaps id='.$post_id.']';
 			echo '<input type="text" size="20" value="'.$meta_shortcode.'" readonly />';
 		}
+
+		do_action('areamaps/admin/column_value', $column, $post_id);
 	}
 }
 ?>
